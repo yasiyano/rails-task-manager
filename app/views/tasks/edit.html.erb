@@ -1,0 +1,15 @@
+<div class='container'>
+<h1>Edit Task</h1>
+<br><br><br>
+<form action='/tasks' method='post'>
+  <%= form_for(@task) do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %><br><br>
+    <%= t.label :details %>
+    <%= t.text_field :details %><br><br>
+    <%= t.label :completed %>
+    <%= t.check_box :completed %><br><br>
+    <%= t.submit %>
+  <% end %>
+  </form>
+</div>

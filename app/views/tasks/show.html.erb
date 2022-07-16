@@ -1,0 +1,17 @@
+<div class='container'>
+  <h2><%= @task.title %></h2>
+  <form action="/edit" method='post'>
+    <input type="submit" value="Edit Task" id=<%@task.id%>>
+  </form>
+</div>
+<div class='container'><p><%= @task.details %></p>
+  <% if @task.completed %>
+    <input type="checkbox" checked>
+    <label> This task is completed </label>
+  <% else %>
+    <input type="checkbox">
+    <label>This task is not completed yet</label>
+  <% end %>
+</div>
+<br>
+<div><%= link_to 'Back to list', tasks_path%></div>
